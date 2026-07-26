@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://qq6ljv6h6kqv"]
+
+[ext_resource type="Script" uid="uid://cw5niqt68tfdj" path="res://scripts/ui/battle_ui.gd" id="1_p4gof"]
+[ext_resource type="Texture2D" uid="uid://cjy5e1lxekejq" path="res://icon.svg" id="2_gvrrm"]
+
+[node name="BattleUi" type="Control" unique_id=507327505]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p4gof")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=741132543]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 190.0
+grow_vertical = 2
+alignment = 1
+
+[node name="Skill" type="Button" parent="VBoxContainer" unique_id=861098267]
+custom_minimum_size = Vector2(200, 280)
+layout_mode = 2
+text = "Skill01"
+icon = ExtResource("2_gvrrm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Skill" unique_id=1395608116]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 137.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Effect" type="Button" parent="VBoxContainer/Skill/VBoxContainer" unique_id=1497821941]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+text = "Effect01"
+icon = ExtResource("2_gvrrm")
+expand_icon = true
+
+[node name="Effect2" type="Button" parent="VBoxContainer/Skill/VBoxContainer" unique_id=320242623]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+text = "Effect02"
+icon = ExtResource("2_gvrrm")
+expand_icon = true
+
+[node name="Effect3" type="Button" parent="VBoxContainer/Skill/VBoxContainer" unique_id=664614267]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+text = "Effect02"
+icon = ExtResource("2_gvrrm")
+expand_icon = true
+
+[node name="Effect4" type="Button" parent="VBoxContainer/Skill/VBoxContainer" unique_id=30283506]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+text = "Effect02"
+icon = ExtResource("2_gvrrm")
+expand_icon = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=497442964]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Skill01" type="TextureRect" parent="HBoxContainer" unique_id=1701931751]
+layout_mode = 2
+texture = ExtResource("2_gvrrm")
+
+[node name="Skill02" type="TextureRect" parent="HBoxContainer" unique_id=1884720551]
+layout_mode = 2
+texture = ExtResource("2_gvrrm")

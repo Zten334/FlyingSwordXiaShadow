@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://cr7v2tqtopt5w"]
+
+[ext_resource type="Texture2D" uid="uid://cuabhqvwbdma4" path="res://assets/character_sprite/GURuoFengQ_Body.png" id="1_c6c78"]
+[ext_resource type="Texture2D" uid="uid://chirr7pv3ltbh" path="res://assets/character_sprite/GURuoFengQ_Head.png" id="2_bavhp"]
+[ext_resource type="Texture2D" uid="uid://b7xoxnkgwdqmv" path="res://assets/character_sprite/GURuoFengQ_Hand.png" id="3_bbr0q"]
+[ext_resource type="Texture2D" uid="uid://bhswakmk84q8p" path="res://assets/character_sprite/GURuoFengQ_Leg.png" id="4_bavhp"]
+
+[node name="2dQAnimation" type="Node2D" unique_id=824083093]
+texture_filter = 1
+
+[node name="Skeleton2D" type="Skeleton2D" parent="." unique_id=1819441038]
+position = Vector2(-5, -18)
+scale = Vector2(3, 3)
+
+[node name="Root" type="Bone2D" parent="Skeleton2D" unique_id=1364735592]
+
+[node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Root" unique_id=1676476132]
+texture = ExtResource("1_c6c78")
+offset = Vector2(-2, -16)
+
+[node name="Head" type="Bone2D" parent="Skeleton2D/Root" unique_id=1279065540]
+position = Vector2(0, -18.666668)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = -90.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Root/Head" unique_id=1465240554]
+texture = ExtResource("2_bavhp")
+offset = Vector2(-2, 2)
+
+[node name="HandLeft" type="Bone2D" parent="Skeleton2D/Root" unique_id=1771128104]
+position = Vector2(-11.333334, -7.3333335)
+auto_calculate_length_and_angle = false
+length = 8.0
+bone_angle = 90.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Root/HandLeft" unique_id=1717655078]
+texture = ExtResource("3_bbr0q")
+offset = Vector2(11, -9)
+
+[node name="HandRight" type="Bone2D" parent="Skeleton2D/Root" unique_id=1800133942]
+position = Vector2(10, -7.3333335)
+auto_calculate_length_and_angle = false
+length = 8.0
+bone_angle = 90.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Root/HandRight" unique_id=886223709]
+texture = ExtResource("3_bbr0q")
+offset = Vector2(11, -9)
+
+[node name="LegLeft" type="Bone2D" parent="Skeleton2D/Root" unique_id=131132495]
+position = Vector2(5, 0)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 90.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Root/LegLeft" unique_id=1342318643]
+texture = ExtResource("4_bavhp")
+offset = Vector2(3, -16)
+
+[node name="LegRight" type="Bone2D" parent="Skeleton2D/Root" unique_id=1415679507]
+position = Vector2(-4.666667, 0)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 90.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Skeleton2D/Root/LegRight" unique_id=501710498]
+texture = ExtResource("4_bavhp")
+offset = Vector2(3, -16)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1572143001]
+zoom = Vector2(3, 3)
+
+[node name="Targets" type="Node2D" parent="." unique_id=1423655832]
+
+[node name="HandLeft" type="Marker2D" parent="Targets" unique_id=2120607956]
+position = Vector2(25, -40)
+
+[node name="LegLeft" type="Marker2D" parent="Targets" unique_id=609265401]
+position = Vector2(10, -1)
+
+[node name="LegRight" type="Marker2D" parent="Targets" unique_id=1314140188]
+position = Vector2(-19, -1)
+
+[node name="HandRight" type="Marker2D" parent="Targets" unique_id=1290383621]
+position = Vector2(-39, -40)

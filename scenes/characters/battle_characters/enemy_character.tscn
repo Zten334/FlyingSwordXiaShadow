@@ -1,0 +1,233 @@
+[gd_scene format=3 uid="uid://cqqrc772nktxx"]
+
+[ext_resource type="Script" uid="uid://ca3ctwwh6mtuc" path="res://scripts/characters/hero_character.gd" id="1_0cnfm"]
+[ext_resource type="Texture2D" uid="uid://5wuenols2gjw" path="res://assets/warrior/SpriteSheet/Warrior_Sheet-Effect.png" id="2_3bp14"]
+[ext_resource type="Script" uid="uid://dh7wetilppxaw" path="res://scripts/demo/animation_player.gd" id="3_3bp14"]
+[ext_resource type="Script" uid="uid://b7xhwq2oeloaw" path="res://scripts/demo/ability_system/components/hero_ability_component.gd" id="3_diuhf"]
+[ext_resource type="Script" uid="uid://dnc7pq0ktvmrd" path="res://scripts/components/combat_component.gd" id="3_xph3k"]
+[ext_resource type="AnimationNodeStateMachine" uid="uid://h7vu6kq3ckco" path="res://resources/animation_tree_node/hero_animation_node_state_machine.tres" id="4_ixu35"]
+[ext_resource type="Resource" uid="uid://0klc1fi38u8c" path="res://resources/ability_system/abilities/hurt_ability.tres" id="6_fjw88"]
+[ext_resource type="Script" uid="uid://8rakaweqfvln" path="res://scripts/demo/ability_system/abilities/hurt_ability.gd" id="6_xph3k"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ejkfg"]
+radius = 0.09667969
+height = 0.3447876
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_fjw88"]
+radius = 0.2
+
+[sub_resource type="Animation" id="Animation_y11bx"]
+resource_name = "Dash"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [69, 70, 71, 72, 73, 74]
+}
+
+[sub_resource type="Animation" id="Animation_1abwn"]
+resource_name = "Hurt"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [37, 38, 39, 40]
+}
+
+[sub_resource type="Animation" id="Animation_a3kyh"]
+resource_name = "Idle"
+length = 1.2
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_x8us7"]
+resource_name = "Jump"
+length = 0.6
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [41, 42, 43, 44, 45, 47]
+}
+
+[sub_resource type="Animation" id="Animation_diuhf"]
+resource_name = "Light_Attack_01"
+length = 0.3
+step = 0.025
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.025, 0.05, 0.075, 0.1, 0.15, 0.2, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [14, 15, 16, 17, 18, 19, 20, 21]
+}
+
+[sub_resource type="Animation" id="Animation_qxaqs"]
+resource_name = "Light_Attack_02"
+length = 0.15
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [22, 23, 24]
+}
+
+[sub_resource type="Animation" id="Animation_4uyuq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("CharacterBody3D/Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_ashau"]
+resource_name = "Run"
+length = 1.4
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9, 10, 11, 12]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xph3k"]
+_data = {
+&"Dash": SubResource("Animation_y11bx"),
+&"Hurt": SubResource("Animation_1abwn"),
+&"Idle": SubResource("Animation_a3kyh"),
+&"Jump": SubResource("Animation_x8us7"),
+&"Light_Attack_01": SubResource("Animation_diuhf"),
+&"Light_Attack_02": SubResource("Animation_qxaqs"),
+&"RESET": SubResource("Animation_4uyuq"),
+&"Run": SubResource("Animation_ashau")
+}
+
+[node name="EnemyCharacter" type="Node3D" unique_id=1574031806]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1304563451 node_paths=PackedStringArray("animation_base", "combat_component", "ability_component") groups=["enemy_faction"]]
+collision_mask = 5
+script = ExtResource("1_0cnfm")
+animation_base = NodePath("../AnimatorBase")
+combat_component = NodePath("../CombatComponent")
+ability_component = NodePath("../AbilityComponent")
+metadata/_custom_type_script = "uid://ca3ctwwh6mtuc"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1367948775]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02, 0.172, 0)
+shape = SubResource("CapsuleShape3D_ejkfg")
+
+[node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D" unique_id=1860866439]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22, 0)
+offset = Vector2(5, 0)
+texture_filter = 0
+texture = ExtResource("2_3bp14")
+hframes = 6
+vframes = 17
+region_enabled = true
+region_rect = Rect2(0, 0, 412, 748)
+
+[node name="CombatComponent" type="Node3D" parent="." unique_id=1320794325 node_paths=PackedStringArray("attack_area")]
+script = ExtResource("3_xph3k")
+attack_area = NodePath("Area3D")
+
+[node name="Area3D" type="Area3D" parent="CombatComponent" unique_id=160122327]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CombatComponent/Area3D" unique_id=1970757156]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15995018, 0.22411335, 0)
+shape = SubResource("SphereShape3D_fjw88")
+
+[node name="AbilityComponent" type="Node" parent="." unique_id=515042124 node_paths=PackedStringArray("owner_character", "owner_animator", "abilities_map")]
+script = ExtResource("3_diuhf")
+owner_character = NodePath("../CharacterBody3D")
+owner_animator = NodePath("../AnimatorBase")
+abilities_map = {
+128: NodePath("HurtAbility")
+}
+
+[node name="MoveAbility" type="Node" parent="AbilityComponent" unique_id=610385025]
+
+[node name="AttackAbility" type="Node" parent="AbilityComponent" unique_id=1169341316]
+
+[node name="DashAbility" type="Node" parent="AbilityComponent" unique_id=1456795095]
+
+[node name="HurtAbility" type="Node" parent="AbilityComponent" unique_id=118475677]
+script = ExtResource("6_xph3k")
+montage_name = "Hurt"
+animation_time = 0.2
+ability_data = ExtResource("6_fjw88")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1530573091]
+libraries/ = SubResource("AnimationLibrary_xph3k")
+
+[node name="AnimatorBase" type="AnimationTree" parent="." unique_id=72205154 node_paths=PackedStringArray("sprite", "character")]
+tree_root = ExtResource("4_ixu35")
+anim_player = NodePath("../AnimationPlayer")
+parameters/Ability/Transition/current_state = ""
+parameters/Ability/Transition/transition_request = ""
+parameters/Ability/Transition/current_index = -1
+script = ExtResource("3_3bp14")
+sprite = NodePath("../CharacterBody3D/Sprite3D")
+character = NodePath("../CharacterBody3D")
+metadata/_custom_type_script = "uid://dh7wetilppxaw"

@@ -1,0 +1,6 @@
+#以下函数名为接口专用
+
+#on_play_animation(String anim)播放动画
+
+
+#is_hit() 被攻击命中时调用的函数

@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cqvsfykmm3mt8"]
+
+[ext_resource type="Texture2D" uid="uid://cjy5e1lxekejq" path="res://icon.svg" id="1_3n4vj"]
+[ext_resource type="Script" uid="uid://pg2gudqxdycw" path="res://scripts/dialogue.gd" id="2_bfpow"]
+
+[node name="Node2D" type="Node2D" unique_id=1272602144]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=743486701]
+visible = false
+position = Vector2(146, 327)
+texture = ExtResource("1_3n4vj")
+
+[node name="Label" type="Label" parent="Sprite2D" unique_id=1485434785]
+offset_left = -42.0
+offset_top = -128.0
+offset_right = 60.0
+offset_bottom = -74.0
+text = "你来了"
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1660334377]
+visible = false
+position = Vector2(836, 334)
+texture = ExtResource("1_3n4vj")
+
+[node name="Label2" type="Label" parent="Sprite2D2" unique_id=2104201889]
+offset_left = -45.0
+offset_top = -139.0
+offset_right = 57.0
+offset_bottom = -85.0
+text = "没有，不过，我找到了一个新的线索"
+
+[node name="Node" type="Node" parent="." unique_id=2067191514]
+
+[node name="Control" type="Control" parent="." unique_id=1943608370 node_paths=PackedStringArray("dialogue_button")]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_bfpow")
+dialogue_button = NodePath("Button")
+dialogue_list = Array[String](["你来了？", "找到了吗？", "没有。不过，我发现了一条新的线索", "哦？"])
+
+[node name="Button" type="Button" parent="Control" unique_id=1774931895]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 433.0
+offset_right = 798.0
+offset_bottom = 556.0
+alignment = 0
+text_overrun_behavior = 2
+autowrap_mode = 3

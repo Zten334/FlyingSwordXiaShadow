@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="AbilityMapping" format=3 uid="uid://dv6yct3ovbdhh"]
+
+[ext_resource type="Script" uid="uid://qf6aeynukp7c" path="res://scripts/resources/abilities/ability_data.gd" id="1_3ia84"]
+[ext_resource type="Script" uid="uid://dju17manjnqxj" path="res://scripts/resources/abilities/ability_map.gd" id="1_b5vti"]
+[ext_resource type="Resource" uid="uid://d2d71w65gqbi2" path="res://resources/ability_system/abilities/move_ability.tres" id="2_dltfw"]
+[ext_resource type="Resource" uid="uid://r4eqiqeljap8" path="res://resources/ability_system/abilities/attack_ability.tres" id="3_dltfw"]
+[ext_resource type="Resource" uid="uid://besmx0saw48kq" path="res://resources/ability_system/abilities/dash_ability.tres" id="4_g8ko8"]
+[ext_resource type="Resource" uid="uid://0klc1fi38u8c" path="res://resources/ability_system/abilities/hurt_ability.tres" id="5_7nncv"]
+
+[resource]
+script = ExtResource("1_b5vti")
+ability_dic = Dictionary[int, ExtResource("1_3ia84")]({
+128: ExtResource("5_7nncv"),
+129: ExtResource("2_dltfw"),
+132: ExtResource("3_dltfw"),
+133: ExtResource("4_g8ko8")
+})
+metadata/_custom_type_script = "uid://dju17manjnqxj"

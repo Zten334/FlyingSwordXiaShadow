@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="AbilityData" format=3 uid="uid://d2d71w65gqbi2"]
+
+[ext_resource type="Script" uid="uid://qf6aeynukp7c" path="res://scripts/resources/abilities/ability_data.gd" id="1_i1avv"]
+
+[resource]
+script = ExtResource("1_i1avv")
+ability_tag = 129
+metadata/_custom_type_script = "uid://qf6aeynukp7c"

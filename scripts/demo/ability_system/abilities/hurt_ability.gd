@@ -1,0 +1,2 @@
+extends MontageAbility
+class_name HurtAbility

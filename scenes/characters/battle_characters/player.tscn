@@ -1,0 +1,306 @@
+[gd_scene format=3 uid="uid://d177sdiee30vj"]
+
+[ext_resource type="Script" uid="uid://chpsnn1ve5xb4" path="res://scripts/demo/follow.gd" id="1_ashau"]
+[ext_resource type="Texture2D" uid="uid://dh8llpmxwp8nc" path="res://assets/warrior/Individual Sprite/idle/Warrior_Idle_1.png" id="2_aidjo"]
+[ext_resource type="Texture2D" uid="uid://duqpdgqb0yjgx" path="res://assets/warrior/Individual Sprite/Attack/Warrior_Attack_1.png" id="2_ha3k5"]
+[ext_resource type="Script" uid="uid://ca3ctwwh6mtuc" path="res://scripts/characters/hero_character.gd" id="2_qxaqs"]
+[ext_resource type="Texture2D" uid="uid://citfqktp2v82k" path="res://assets/warrior/Individual Sprite/idle/Warrior_Idle_2.png" id="3_6ydty"]
+[ext_resource type="Texture2D" uid="uid://t0mvdwuqu66q" path="res://assets/warrior/Individual Sprite/Attack/Warrior_Attack_2.png" id="3_s88s4"]
+[ext_resource type="Texture2D" uid="uid://dm8asi6qavtvg" path="res://assets/warrior/Individual Sprite/Attack/Warrior_Attack_3.png" id="4_8gll6"]
+[ext_resource type="Texture2D" uid="uid://dgoq5b0shnmi0" path="res://assets/warrior/Individual Sprite/idle/Warrior_Idle_3.png" id="4_ot5i3"]
+[ext_resource type="Texture2D" uid="uid://dw1prpdfn220" path="res://assets/warrior/Individual Sprite/idle/Warrior_Idle_4.png" id="5_06ag1"]
+[ext_resource type="Texture2D" uid="uid://dbpqybbp0to00" path="res://assets/warrior/Individual Sprite/Attack/Warrior_Attack_4.png" id="5_lhcu1"]
+[ext_resource type="Texture2D" uid="uid://ly4d0ofssxm8" path="res://assets/warrior/Individual Sprite/Attack/Warrior_Attack_5.png" id="6_adje2"]
+[ext_resource type="Texture2D" uid="uid://coi016vgk4m50" path="res://assets/warrior/Individual Sprite/idle/Warrior_Idle_5.png" id="6_q1k52"]
+[ext_resource type="Texture2D" uid="uid://dkr37fnhp4pja" path="res://assets/warrior/Individual Sprite/Attack/Warrior_Attack_6.png" id="7_dgs0b"]
+[ext_resource type="Texture2D" uid="uid://h4xsoikf8jv7" path="res://assets/warrior/Individual Sprite/idle/Warrior_Idle_6.png" id="7_gk8ui"]
+[ext_resource type="Texture2D" uid="uid://cm4jpeu4ns08m" path="res://assets/warrior/Individual Sprite/Attack/Warrior_Attack_7.png" id="8_0p7l0"]
+[ext_resource type="Texture2D" uid="uid://6hiop5w7dejl" path="res://assets/warrior/Individual Sprite/Run/Warrior_Run_1.png" id="8_xhd2w"]
+[ext_resource type="Texture2D" uid="uid://b8185cgbt5vl8" path="res://assets/warrior/Individual Sprite/Attack/Warrior_Attack_8.png" id="9_bpvaf"]
+[ext_resource type="Texture2D" uid="uid://dnn3q74kpic46" path="res://assets/warrior/Individual Sprite/Run/Warrior_Run_2.png" id="9_dos68"]
+[ext_resource type="Texture2D" uid="uid://dr7betlr82b6j" path="res://assets/warrior/Individual Sprite/Attack/Warrior_Attack_9.png" id="10_igkh2"]
+[ext_resource type="Texture2D" uid="uid://brnhlj5eksrk6" path="res://assets/warrior/Individual Sprite/Run/Warrior_Run_3.png" id="10_jvrug"]
+[ext_resource type="Texture2D" uid="uid://4ehddboylvyw" path="res://assets/warrior/Individual Sprite/Run/Warrior_Run_4.png" id="11_6owq7"]
+[ext_resource type="Texture2D" uid="uid://bvn3yfecq0b68" path="res://assets/warrior/Individual Sprite/Attack/Warrior_Attack_10.png" id="11_ilf6s"]
+[ext_resource type="Texture2D" uid="uid://dlb8c8we7abaq" path="res://assets/warrior/Individual Sprite/Run/Warrior_Run_5.png" id="12_gvjvj"]
+[ext_resource type="Texture2D" uid="uid://dnqqegjgf3hv1" path="res://assets/warrior/Individual Sprite/Attack/Warrior_Attack_11.png" id="12_vltqn"]
+[ext_resource type="Texture2D" uid="uid://bigp1i2nesfux" path="res://assets/warrior/Individual Sprite/Attack/Warrior_Attack_12.png" id="13_17dls"]
+[ext_resource type="Texture2D" uid="uid://d32xpbwrr4njp" path="res://assets/warrior/Individual Sprite/Run/Warrior_Run_6.png" id="13_y12lf"]
+[ext_resource type="Texture2D" uid="uid://dd53r8e2iqf8f" path="res://assets/warrior/Individual Sprite/Run/Warrior_Run_7.png" id="14_5eolm"]
+[ext_resource type="Texture2D" uid="uid://bqhgpgoric1xm" path="res://assets/warrior/Individual Sprite/Run/Warrior_Run_8.png" id="15_88mwq"]
+[ext_resource type="Texture2D" uid="uid://daqbtneev02yy" path="res://assets/warrior/Individual Sprite/Dash Attack/Warrior_Dash-Attack_1.png" id="28_vltqn"]
+[ext_resource type="Texture2D" uid="uid://miv1hn358tid" path="res://assets/warrior/Individual Sprite/Dash Attack/Warrior_Dash-Attack_2.png" id="29_17dls"]
+[ext_resource type="Texture2D" uid="uid://caapv4qrfiwb1" path="res://assets/warrior/Individual Sprite/Dash Attack/Warrior_Dash-Attack_3.png" id="30_a3kyh"]
+[ext_resource type="Texture2D" uid="uid://dmgll6o1jaoas" path="res://assets/warrior/Individual Sprite/Dash Attack/Warrior_Dash-Attack_4.png" id="31_4uyuq"]
+[ext_resource type="Texture2D" uid="uid://bue3xp2ihse4b" path="res://assets/warrior/Individual Sprite/Dash Attack/Warrior_Dash-Attack_5.png" id="32_x8us7"]
+[ext_resource type="Texture2D" uid="uid://dqq5uyj8gbb43" path="res://assets/warrior/Individual Sprite/Dash Attack/Warrior_Dash-Attack_6.png" id="33_ashau"]
+[ext_resource type="Texture2D" uid="uid://bugp8vmf3nupq" path="res://assets/warrior/Individual Sprite/Dash Attack/Warrior_Dash-Attack_7.png" id="34_qxaqs"]
+[ext_resource type="Texture2D" uid="uid://ctpwq71fef1vn" path="res://assets/warrior/Individual Sprite/Dash Attack/Warrior_Dash-Attack_8.png" id="35_u4ijm"]
+[ext_resource type="Texture2D" uid="uid://d2s11cdsoy87x" path="res://assets/warrior/Individual Sprite/Dash Attack/Warrior_Dash-Attack_9.png" id="36_fyhr5"]
+[ext_resource type="Texture2D" uid="uid://dcocibtpdih23" path="res://assets/warrior/Individual Sprite/Dash Attack/Warrior_Dash-Attack_10.png" id="37_pljdk"]
+[ext_resource type="Texture2D" uid="uid://5wuenols2gjw" path="res://assets/warrior/SpriteSheet/Warrior_Sheet-Effect.png" id="39_a3kyh"]
+[ext_resource type="Script" uid="uid://b7xhwq2oeloaw" path="res://scripts/demo/ability_system/components/hero_ability_component.gd" id="39_vltqn"]
+[ext_resource type="Script" uid="uid://dnc7pq0ktvmrd" path="res://scripts/components/combat_component.gd" id="40_qxaqs"]
+[ext_resource type="Script" uid="uid://dwqbpufkmkv88" path="res://scripts/demo/ability_system/abilities/common/move_ability.gd" id="40_vltqn"]
+[ext_resource type="Script" uid="uid://cqt2ty4jarmfp" path="res://scripts/components/status_component.gd" id="41_5h4pb"]
+[ext_resource type="Script" uid="uid://8rakaweqfvln" path="res://scripts/demo/ability_system/abilities/hurt_ability.gd" id="41_7nlnn"]
+[ext_resource type="Script" uid="uid://slngh48ns06h" path="res://scripts/demo/ability_system/abilities/attack_ability.gd" id="42_4uyuq"]
+[ext_resource type="Script" uid="uid://dh7wetilppxaw" path="res://scripts/demo/animation_player.gd" id="42_a3kyh"]
+[ext_resource type="Script" uid="uid://s3l67yueaa3t" path="res://scripts/demo/ability_system/abilities/dash_ability.gd" id="43_x8us7"]
+[ext_resource type="Resource" uid="uid://d2d71w65gqbi2" path="res://resources/ability_system/abilities/move_ability.tres" id="44_5h4pb"]
+[ext_resource type="Resource" uid="uid://r4eqiqeljap8" path="res://resources/ability_system/abilities/attack_ability.tres" id="46_krqia"]
+[ext_resource type="AnimationLibrary" uid="uid://spkohsdrimaq" path="res://resources/animation_library/female_warrior_animation.res" id="46_pi4qq"]
+[ext_resource type="AnimationNodeStateMachine" uid="uid://h7vu6kq3ckco" path="res://resources/animation_tree_node/hero_animation_node_state_machine.tres" id="47_jxnyt"]
+[ext_resource type="Resource" uid="uid://besmx0saw48kq" path="res://resources/ability_system/abilities/dash_ability.tres" id="48_ejt4r"]
+[ext_resource type="Resource" uid="uid://0klc1fi38u8c" path="res://resources/ability_system/abilities/hurt_ability.tres" id="50_k3i47"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rkhd4"]
+radius = 0.09667969
+height = 0.3447876
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8rpqn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ha3k5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s88s4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8gll6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lhcu1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_adje2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dgs0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0p7l0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bpvaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_igkh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ilf6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vltqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_17dls")
+}],
+"loop": 0,
+"name": &"Attack",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_aidjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6ydty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ot5i3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_06ag1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q1k52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gk8ui")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_xhd2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dos68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jvrug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6owq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_gvjvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_y12lf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5eolm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_88mwq")
+}],
+"loop": 1,
+"name": &"Run",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_vltqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_17dls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_a3kyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_4uyuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_x8us7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ashau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_qxaqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_u4ijm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_fyhr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_pljdk")
+}],
+"loop": 0,
+"name": &"Special_Ability",
+"speed": 18.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jxnyt"]
+size = Vector3(0.88, 0.383, 0.43)
+
+[node name="Character" type="Node3D" unique_id=454213129]
+script = ExtResource("1_ashau")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1582594661 node_paths=PackedStringArray("animation_base", "combat_component", "ability_component") groups=["player_faction"]]
+collision_mask = 5
+floor_max_angle = 1.0471976
+script = ExtResource("2_qxaqs")
+animation_base = NodePath("../AnimationTree")
+combat_component = NodePath("Sprite3D/CombatComponent")
+ability_component = NodePath("../AbilityComponent")
+gravity_rate = 2.0
+max_speed = 5.0
+jump_velocity = 5.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=2108025295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1723938, 0)
+shape = SubResource("CapsuleShape3D_rkhd4")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="CharacterBody3D" unique_id=518126594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1816892, 0)
+visible = false
+offset = Vector2(5, 4)
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_8rpqn")
+animation = &"Idle"
+frame = 4
+frame_progress = 0.40771076
+
+[node name="EffectComponent" type="Node" parent="CharacterBody3D" unique_id=273463003]
+
+[node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D" unique_id=284115724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22, 0)
+offset = Vector2(5, 0)
+texture_filter = 0
+texture = ExtResource("39_a3kyh")
+hframes = 6
+vframes = 17
+frame = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 412, 748)
+
+[node name="CombatComponent" type="Node3D" parent="CharacterBody3D/Sprite3D" unique_id=603022582 node_paths=PackedStringArray("attack_area")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.22, 0)
+script = ExtResource("40_qxaqs")
+attack_area = NodePath("Area3D")
+target_faction = &"enemy_faction"
+
+[node name="Area3D" type="Area3D" parent="CharacterBody3D/Sprite3D/CombatComponent" unique_id=411694032]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/Sprite3D/CombatComponent/Area3D" unique_id=904240895]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.2025879, 0.21573584, 4.258019e-09)
+shape = SubResource("BoxShape3D_jxnyt")
+
+[node name="StatusComponent" type="Node" parent="." unique_id=469722898]
+script = ExtResource("41_5h4pb")
+
+[node name="AbilityComponent" type="Node" parent="." unique_id=1423077173 node_paths=PackedStringArray("owner_character", "owner_animator", "abilities_map")]
+script = ExtResource("39_vltqn")
+input_tag_map = Dictionary[StringName, int]({
+&"attack": 132,
+&"dash": 133,
+&"test": 128
+})
+owner_character = NodePath("../CharacterBody3D")
+owner_animator = NodePath("../AnimationTree")
+abilities_map = {
+128: NodePath("HurtAbility"),
+129: NodePath("MoveAbility"),
+132: NodePath("AttackAbility"),
+133: NodePath("DashAbility")
+}
+
+[node name="MoveAbility" type="Node" parent="AbilityComponent" unique_id=1795347979]
+script = ExtResource("40_vltqn")
+ability_data = ExtResource("44_5h4pb")
+
+[node name="AttackAbility" type="Node" parent="AbilityComponent" unique_id=207358103]
+script = ExtResource("42_4uyuq")
+max_speed = Array[float]([3.0, 2.0])
+max_combo = 1
+combo_montages = Array[String](["Light_Attack_01", "Light_Attack_02"])
+montage_durations = Array[float]([0.3, 0.15])
+combo_internl = 0.5
+montage_name = "Light_Attack_01"
+animation_time = 0.3
+ability_data = ExtResource("46_krqia")
+
+[node name="DashAbility" type="Node" parent="AbilityComponent" unique_id=1858959163]
+script = ExtResource("43_x8us7")
+max_speed = 20.0
+montage_name = "Dash"
+animation_time = 0.3
+ability_data = ExtResource("48_ejt4r")
+
+[node name="HurtAbility" type="Node" parent="AbilityComponent" unique_id=524392236]
+script = ExtResource("41_7nlnn")
+montage_name = "Hurt"
+animation_time = 0.2
+ability_data = ExtResource("50_k3i47")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=94050122]
+libraries/ = ExtResource("46_pi4qq")
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1649947371 node_paths=PackedStringArray("sprite", "character")]
+tree_root = ExtResource("47_jxnyt")
+anim_player = NodePath("../AnimationPlayer")
+parameters/Ability/Transition/current_state = "state_0"
+parameters/Ability/Transition/transition_request = ""
+parameters/Ability/Transition/current_index = 0
+script = ExtResource("42_a3kyh")
+sprite = NodePath("../CharacterBody3D/Sprite3D")
+character = NodePath("../CharacterBody3D")
