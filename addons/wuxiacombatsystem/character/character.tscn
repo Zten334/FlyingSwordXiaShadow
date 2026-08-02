@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://dfsmglbg0jihv"]
+
+[ext_resource type="Script" uid="uid://bw85u0kq4ls75" path="res://addons/wuxiacombatsystem/scripts/base_character.gd" id="1_xdgib"]
+[ext_resource type="Texture2D" uid="uid://5wuenols2gjw" path="res://assets/warrior/SpriteSheet/Warrior_Sheet-Effect.png" id="2_xdgib"]
+[ext_resource type="Script" uid="uid://buem4ufrrd7ol" path="res://addons/wuxiacombatsystem/scripts/character_ani.gd" id="3_xua1b"]
+[ext_resource type="AnimationLibrary" uid="uid://bruoof7j80e7" path="res://addons/wuxiacombatsystem/assets/charactercombatsystem.res" id="4_2vl15"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dc0pm"]
+radius = 0.10546875
+height = 0.30822754
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7w2pl"]
+animation = &"charactercombatsystem/Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2vl15"]
+animation = &"charactercombatsystem/Run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3667e"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7w2pl"]
+advance_mode = 2
+advance_expression = "has_velocity"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qmc33"]
+advance_mode = 2
+advance_expression = "!has_velocity"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_xua1b"]
+states/charactercombatsystem_Idle/node = SubResource("AnimationNodeAnimation_7w2pl")
+states/charactercombatsystem_Idle/position = Vector2(461, 99.28906)
+states/charactercombatsystem_Run/node = SubResource("AnimationNodeAnimation_2vl15")
+states/charactercombatsystem_Run/position = Vector2(460.75, 214)
+transitions = ["Start", "charactercombatsystem_Idle", SubResource("AnimationNodeStateMachineTransition_3667e"), "charactercombatsystem_Idle", "charactercombatsystem_Run", SubResource("AnimationNodeStateMachineTransition_7w2pl"), "charactercombatsystem_Run", "charactercombatsystem_Idle", SubResource("AnimationNodeStateMachineTransition_qmc33")]
+graph_offset = Vector2(238, 55)
+
+[sub_resource type="Animation" id="Animation_qmc33"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rf03t"]
+_data = {
+&"RESET": SubResource("Animation_qmc33")
+}
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=440418979]
+script = ExtResource("1_xdgib")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=721659085]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18760407, 0)
+shape = SubResource("CapsuleShape3D_dc0pm")
+
+[node name="CharacterSprite" type="Sprite3D" parent="." unique_id=1403732912]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22, 0)
+offset = Vector2(5, 0)
+texture_filter = 0
+texture = ExtResource("2_xdgib")
+hframes = 6
+vframes = 17
+region_enabled = true
+region_rect = Rect2(0, 0, 412, 748)
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=918220104]
+tree_root = SubResource("AnimationNodeStateMachine_xua1b")
+anim_player = NodePath("../AnimationPlayer")
+script = ExtResource("3_xua1b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1261899896]
+libraries/ = SubResource("AnimationLibrary_rf03t")
+libraries/charactercombatsystem = ExtResource("4_2vl15")

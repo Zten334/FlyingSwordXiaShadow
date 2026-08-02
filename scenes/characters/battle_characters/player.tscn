@@ -229,7 +229,7 @@ texture_filter = 0
 texture = ExtResource("39_a3kyh")
 hframes = 6
 vframes = 17
-frame = 1
+frame = 6
 region_enabled = true
 region_rect = Rect2(0, 0, 412, 748)
 

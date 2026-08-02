@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://r4gio6abmpd"
+path="res://.godot/imported/赵季平 - 王进打高俅_主旋律.mp3-e8ca6e27d52d6e493715035c0c4c26a7.mp3str"
+
+[deps]
+
+source_file="res://assets/music/赵季平 - 王进打高俅_主旋律.mp3"
+dest_files=["res://.godot/imported/赵季平 - 王进打高俅_主旋律.mp3-e8ca6e27d52d6e493715035c0c4c26a7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

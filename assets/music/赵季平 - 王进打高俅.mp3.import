@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://owfwumvwq0vx"
+path="res://.godot/imported/赵季平 - 王进打高俅.mp3-73837b1664adc5589389b9954207e456.mp3str"
+
+[deps]
+
+source_file="res://assets/music/赵季平 - 王进打高俅.mp3"
+dest_files=["res://.godot/imported/赵季平 - 王进打高俅.mp3-73837b1664adc5589389b9954207e456.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
