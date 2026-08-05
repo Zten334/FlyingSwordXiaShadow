@@ -28,5 +28,7 @@ func _handling_moving_input(delta:float) -> void:
 	if owning_character.has_method("accelerate"):
 		owning_character.accelerate(input,delta)
 	
+	if Input.is_action_just_pressed("attack") and owning_character.has_method("light_attack"):
+		owning_character.light_attack()
 
 #endregion

@@ -1,6 +1,7 @@
 extends AnimationTree
 #class_name CharacterAnimator
 
+#暂未启用
 #region SignalsHook
 #传的是事件的类型
 signal trigger_event(int)
@@ -8,11 +9,7 @@ signal trigger_event(int)
 signal dir_event(int,Vector3)
 
 func envoke_trigger_event(tag : StringName,vector:Vector3 = Vector3.ZERO) -> void:
-	if vector == Vector3.ZERO:
-		trigger_event.emit(Global.TagStringDic[tag])
-	else:
-		dir_event.emit(tag,vector)
-
+	pass
 #endregion
 
 #region LocomotionUpdate
@@ -29,7 +26,7 @@ func update_locomotion_data(vel) -> void:
 #region AbilityAnimation
 @onready var playback_sm :AnimationNodeStateMachinePlayback = self.get("parameters/playback")
 
-func _play_montage(name : String):
+func play_montage(name : StringName):
 	if not playback_sm :
 		return
 	playback_sm.start(&"Ability")
